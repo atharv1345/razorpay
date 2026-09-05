@@ -1,0 +1,23 @@
+{
+  "name": "recovery-yield-optimizer",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "AI Revenue Recovery agent for Razorpay Track 3 — Recovery Yield Optimizer",
+  "scripts": {
+    "install:all": "npm install --prefix backend && npm install --prefix frontend",
+    "seed": "node scripts/seed-data.js --reset",
+    "seed:network": "node scripts/seed-network-data.js",
+    "demo:reset": "node scripts/demo-reset.js",
+    "dev:backend": "npm run dev --prefix backend",
+    "dev:frontend": "npm run dev --prefix frontend",
+    "dev": "npm run demo:reset && concurrently \"npm run dev:backend\" \"npm run dev:frontend\"",
+    "start": "npm run dev:backend"
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.2"
+  },
+  "dependencies": {
+    "better-sqlite3": "^11.10.0"
+  }
+}
